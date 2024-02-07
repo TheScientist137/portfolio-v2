@@ -22,7 +22,7 @@ const About = () => {
       boxShadow='lg'
       borderRadius='xl'>
       <Heading as='h3' pt='5px' textAlign='center' lineHeight='tall' fontSize={{ base: '12px', sm: '14px' }}>
-        Hello! I&apos;m a<Badge colorScheme='green' pt='4px' ml='1' fontSize='2md'>Front-End Web Developer</Badge> based in Madrid, Spain
+        Hi! I&apos;m a<Badge colorScheme='green' pt='4px' ml='1' fontSize='2md'>Front-End Web Developer</Badge> based in Madrid, Spain
       </Heading>
    </Box>
 

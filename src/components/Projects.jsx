@@ -35,19 +35,23 @@ const Projects = () => {
         boxShadow='xl'
         bg='gray.100'>
 
-        <CardHeader>
-          <Heading as='h2'>{project.name}</Heading>
-        </CardHeader>
+        <CardHeader as='h3'>{project.name}</CardHeader>
+
+        <Divider />
 
         <CardBody>
           <Image
-            src='./me.jpg'
-            boxSize='xs'
+            src={project.image}
+            boxSize='300px'
+            objectFit='cover'
             align='center'
             mx='auto'
+            mb='20px'
             borderRadius='lg'/>
           <Stack>
-            <Text>{project.description}</Text>
+            <Text as='cite' textAlign='left' fontSize='sm'>
+              {project.description}
+            </Text>
           </Stack>
         </CardBody>
 
