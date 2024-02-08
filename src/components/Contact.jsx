@@ -8,7 +8,9 @@ const Contact = () => {
   h='100%'
   w='100%'
   textAlign='center'>
+
    <Heading as='h2' my='32px'>Contact</Heading>
+
   </Box>
  )
 }

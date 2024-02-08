@@ -28,7 +28,7 @@ const Projects = () => {
     <Heading as='h2' my='32px'>Projects</Heading>
 
    {projects.map(project => (
-     <Card
+      <Card
         key={project.id}
         mb='32px'
         borderStyle='solid'
@@ -55,18 +55,18 @@ const Projects = () => {
           </Stack>
         </CardBody>
 
-     <Divider />
+        <Divider />
 
         <CardFooter>
           <ButtonGroup spacing='2' mx='auto'>
-            <Button as='a' colorScheme='linkedin' variant='outline' href='https://www.linkedin.com/in/guillermo-casado-noya-209b45268/'>
+            <Button as='a' colorScheme='linkedin' variant='outline' href={project.demoLink}>
               <Icon as={FaGooglePlay} boxSize={4}  marginRight='4px' marginBottom='2px' /> Demo
             </Button>
-            <Button as='a' colorScheme='linkedin' variant='outline' href='https://github.com/TheScientist137'>
+            <Button as='a' colorScheme='linkedin' variant='outline' href={project.githubLink}>
               <Icon as={FaGithub} boxSize={4}  marginRight='4px' marginBottom='2px' /> Github        
             </Button>
           </ButtonGroup>
-     </CardFooter>
+        </CardFooter>
    </Card>
    ))}
   </Box>

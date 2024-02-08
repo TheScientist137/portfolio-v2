@@ -33,7 +33,7 @@ const About = () => {
       border='2px'
       borderColor='gray.300'
       borderRadius='full'
-      boxShadow='dark-lg'/>
+      boxShadow='dark-lg' />
 
    <Box mt='32px' textAlign='center'>
       <Heading as='h2' fontSize={{ base: '20px', sm: '32px' }}>
