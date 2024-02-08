@@ -26,9 +26,9 @@ export const projects = [
  {
   name: 'Film Search',
   id: '4',
-  image: './peliculas.jpg',
-  description: 'peliculas description',
-  demoLink: 'demoLink',
-  githubLink: 'githubLink'
+  image: './film-search-image.png',
+  description: 'Explore movies effortlessly with my Vite (React) app, utilizing the OMDB API for quick film searches. Enjoy simple navigation and real-time results for a seamless movie browsing experience',
+  demoLink: 'https://film-search-137.netlify.app/',
+  githubLink: 'https://github.com/TheScientist137/film-search'
  },
 ]
