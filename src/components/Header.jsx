@@ -12,15 +12,17 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Avatar,
+  useColorMode
 } from '@chakra-ui/react'
 import { Link as ChakraLink } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
+import { HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { Link as RouterLink } from 'react-router-dom'
-import Dark from '../util/Dark'
 
 import '../App.css'
 
 const Header = () => {
+  const { colorMode, toggleColorMode } = useColorMode()
+
   return (
     <Box
       className='header'
@@ -56,7 +58,9 @@ const Header = () => {
            </MenuList>
           </Menu>
 
-          <Dark />
+          <IconButton onClick={toggleColorMode} icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}>
+            {colorMode === 'light' ? 'Dark' : 'Light'}
+          </IconButton>
 
         </Box>
       </Show>
@@ -76,8 +80,12 @@ const Header = () => {
             <BreadcrumbLink as={RouterLink} to='/contact'>Contact</BreadcrumbLink>
           </BreadcrumbItem>
 
-         <Dark />
 
+          <IconButton
+            onClick={toggleColorMode}
+            icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}>
+            {colorMode === 'light' ? 'Dark' : 'Light'}
+          </IconButton>
         </Breadcrumb>          
       </Hide>  
     </Box>
