@@ -32,8 +32,7 @@ const Projects = () => {
         key={project.id}
         mb='32px'
         borderStyle='solid'
-        boxShadow='xl'
-        bg='gray.100'>
+        boxShadow='xl' >
 
         <CardHeader as='h3'>{project.name}</CardHeader>
 
