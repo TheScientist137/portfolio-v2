@@ -22,7 +22,7 @@ import { Link as RouterLink } from 'react-router-dom'
 import Dark from './Dark'
 
 const Header = () => {
-  const headerBg = useColorModeValue('gray.100', 'gray.900') 
+  const headerBg = useColorModeValue('#f4ede4', 'black') 
 
   return (
     <Box
@@ -41,7 +41,8 @@ const Header = () => {
       
       <Box as='title' display='flex' justifyContent='center' alignItems='center'>
         <Avatar name='Guillermo Casado' src='/me.jpg' size='sm' mr='6px' />
-        <Heading as='h1' size='sm' fontStyle='italic'>
+
+        <Heading as='h1' size='md' letterSpacing={2.1} fontFamily='Protest Revolution'>
           <ChakraLink as={RouterLink} to='/about'>
             Guillermo Casado
           </ChakraLink>
@@ -60,7 +61,8 @@ const Header = () => {
               boxSize='40px'
               variant='outline'
               aria-label='Options'
-              _hover={{ bg: 'gray.100' }}/>          
+              _hover={{ bgColor: 'whiteAlpha.00' }}/>
+
             <MenuList>
               <MenuItem as={RouterLink} to='/about'>About</MenuItem>
               <MenuItem as={RouterLink} to='/projects'>Projects</MenuItem>

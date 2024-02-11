@@ -17,7 +17,7 @@ import { projects } from "./projects"
 import { FaGithub, FaGooglePlay } from "react-icons/fa"
 
 const Projects = () => {
- return (
+  return (
   <Box 
     as='section'
     id='projects'
@@ -32,7 +32,8 @@ const Projects = () => {
         key={project.id}
         mb='32px'
         borderStyle='solid'
-        boxShadow='xl' >
+        boxShadow='xl'
+        _light={{ bgColor: '#fff6eb' }}>
 
         <CardHeader as='h3'>{project.name}</CardHeader>
 
@@ -47,6 +48,7 @@ const Projects = () => {
             mx='auto'
             mb='20px'
             borderRadius='lg'/>
+
           <Stack>
             <Text as='cite' textAlign='left' fontSize='sm'>
               {project.description}

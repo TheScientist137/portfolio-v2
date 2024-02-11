@@ -6,11 +6,15 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
+import { useColorModeValue } from '@chakra-ui/react'
+
 import './App.css'
 
 function App() {
+  const bgColor = useColorModeValue('#f0e7db', 'gray.900')
+
   return (
-    <Box>
+    <Box bgColor={bgColor}>
       <Header />
       <Container centerContent>
         <Routes>
