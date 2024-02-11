@@ -12,16 +12,17 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Avatar,
-  useColorMode
+  useColorModeValue
 } from '@chakra-ui/react'
 import { Link as ChakraLink } from '@chakra-ui/react'
-import { HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons'
+import { HamburgerIcon } from '@chakra-ui/icons'
+
 import { Link as RouterLink } from 'react-router-dom'
 
-import '../App.css'
+import Dark from './Dark'
 
 const Header = () => {
-  const { colorMode, toggleColorMode } = useColorMode()
+  const headerBg = useColorModeValue('gray.100', 'gray.900') 
 
   return (
     <Box
@@ -35,7 +36,8 @@ const Header = () => {
       top={0}
       left={0}
       zIndex='1'
-      px={{ base: '16px', sm: '32px', md: '64px', lg: '128px', xl: '256' }} >
+      bgColor={headerBg}
+      px={{ base: '16px', md: '64px', lg: '128px', xl: '256' }} >
       
       <Box as='title' display='flex' justifyContent='center' alignItems='center'>
         <Avatar name='Guillermo Casado' src='/me.jpg' size='sm' mr='6px' />
@@ -48,19 +50,23 @@ const Header = () => {
 
       <Show breakpoint='(max-width: 749px)'>
         <Box>
+          <Dark />
 
           <Menu>
-            <MenuButton as={IconButton} icon={<HamburgerIcon />} variant='outline' aria-label='Options' />          
+            <MenuButton
+              as={IconButton}
+              ml='8px'
+              icon={<HamburgerIcon />}
+              boxSize='40px'
+              variant='outline'
+              aria-label='Options'
+              _hover={{ bg: 'gray.100' }}/>          
             <MenuList>
               <MenuItem as={RouterLink} to='/about'>About</MenuItem>
               <MenuItem as={RouterLink} to='/projects'>Projects</MenuItem>
               <MenuItem as={RouterLink} to='/contact'>Contact</MenuItem>
            </MenuList>
           </Menu>
-
-          <IconButton onClick={toggleColorMode} icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}>
-            {colorMode === 'light' ? 'Dark' : 'Light'}
-          </IconButton>
 
         </Box>
       </Show>
@@ -80,12 +86,7 @@ const Header = () => {
             <BreadcrumbLink as={RouterLink} to='/contact'>Contact</BreadcrumbLink>
           </BreadcrumbItem>
 
-
-          <IconButton
-            onClick={toggleColorMode}
-            icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}>
-            {colorMode === 'light' ? 'Dark' : 'Light'}
-          </IconButton>
+          <Dark />
         </Breadcrumb>          
       </Hide>  
     </Box>

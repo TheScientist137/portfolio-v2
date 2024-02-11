@@ -6,7 +6,8 @@ import {
   Stack,
   Button,
   Icon,
-  Badge
+  Badge,
+  useColorModeValue
 } from "@chakra-ui/react"
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
@@ -14,6 +15,8 @@ import { FaGithub } from "react-icons/fa"
 // import Skills from "./Skills"
 
 const About = () => {
+  const bannerBg = useColorModeValue('gray.200', 'gray.700')
+
   return (
     <Box 
       as='section'
@@ -29,7 +32,8 @@ const About = () => {
       my='32px'
       p='12px'
       boxShadow='lg'
-      borderRadius='lg' >
+      borderRadius='lg'
+      bg={bannerBg} >
       <Heading
         as='h3'
         pt='5px'
