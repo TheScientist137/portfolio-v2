@@ -12,6 +12,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Avatar,
+  useColorMode,
   useColorModeValue
 } from '@chakra-ui/react'
 import { Link as ChakraLink } from '@chakra-ui/react'
@@ -21,12 +22,14 @@ import { Link as RouterLink } from 'react-router-dom'
 
 import Dark from './Dark'
 
+import '../App.css'
+
 const Header = () => {
+  const { colorMode } = useColorMode()
   const headerBg = useColorModeValue('#f4ede4', 'black') 
 
   return (
     <Box
-      className='header'
       as='section'
       w='100vw'
       h='54px'
@@ -62,7 +65,7 @@ const Header = () => {
               boxSize='40px'
               variant='outline'
               aria-label='Options'
-              _hover={{ bgColor: 'whiteAlpha.00' }}/>
+              _hover={colorMode === 'light' ? { bg: 'gray.300' } : { bg: 'gray.700' }}/>
 
             <MenuList>
               <MenuItem as={RouterLink} to='/about'>About</MenuItem>

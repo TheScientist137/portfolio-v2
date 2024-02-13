@@ -1,10 +1,19 @@
-import { Box, Text } from "@chakra-ui/react"
+import { Box, Text, useColorModeValue } from "@chakra-ui/react"
 
 const Footer = () => {
+ const footerText = useColorModeValue('gray.400', 'gray.600')
+
  return (
-  <Box w='100%' h='36px' mt='32px' textAlign='center'>
-   <Text as='h4' h='100%' fontSize='14px' fontStyle='italic'>
+  <Box w='100%' h='36px' textAlign='center'>
+   <Text
+    as='h4'
+    h='100%'
+    fontSize='13px'
+    fontStyle='italic'
+    color={footerText}>     
+
     2024 Guillermo Casado. All Rights Reserved 
+    
    </Text>
   </Box>
  )

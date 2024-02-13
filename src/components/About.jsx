@@ -7,6 +7,7 @@ import {
   Button,
   Icon,
   Badge,
+  useColorMode,
 } from "@chakra-ui/react"
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
@@ -14,13 +15,15 @@ import { FaGithub } from "react-icons/fa"
 import Skills from "./Skills"
 
 const About = () => {
+  const { colorMode } = useColorMode()
+
   return (
     <Box 
       as='section'
       id='about'
       w='100%'
       h='100vh'
-      mt='1.8rem'
+      mt='1.7rem'
       display='flex'
       flexDirection='column'
       alignItems='center'
@@ -42,8 +45,8 @@ const About = () => {
           fontFamily='Dosis'
           fontSize='0.9rem'
           fontWeight='700'>
-          Hello! I&apos;m a
-          <Badge colorScheme='green' p='2px' ml='1' mb='1' fontSize='2md'>
+          Hello, I&apos;m a          
+          <Badge colorScheme='green' p='4px' ml='1' mb='1' fontSize='2md' borderRadius='4px'>
             Front-End Web Developer
           </Badge> based in Madrid, Spain          
         </Heading>
@@ -63,11 +66,11 @@ const About = () => {
           Guillermo Casado Noya
         </Heading>
 
-        <Text as='h3' fontFamily='Dosis' fontWeight='400' fontSize={{ base: '12px', sm: '16px' }}>
+        <Text as='h3' fontFamily='Dosis' fontWeight='400' fontSize={{ base: '12px', sm: '14px' }}>
           Software Developer / Electronic Technician
         </Text>
 
-        <Text as='h4' mt='16px' textAlign='start' fontSize={{ base: '14px' }}>
+        <Text as='h4' mt='16px' textAlign='start' fontSize={{ sm: '16px' }} fontFamily='Dosis' fontWeight='500'>
         I began my journey in programming two years ago while pursuing my superior degree in electronics maintenance. Since then, I have developed a deep passion for programming and embarked on a journey to specialize in front-end development.
         </Text>
       </Box>
@@ -75,10 +78,21 @@ const About = () => {
       <Skills />
     
       <Stack direction='row' spacing={2} align='center'>
-        <Button as='a' colorScheme='linkedin' variant='outline' href='https://www.linkedin.com/in/guillermo-casado-noya-209b45268/'>
+        <Button
+          as='a'
+          colorScheme='linkedin'
+          variant='outline'
+          href='https://www.linkedin.com/in/guillermo-casado-noya-209b45268/'>
+
           <Icon as={FaLinkedin} boxSize={4}  marginRight='4px' marginBottom='2px' /> Linkedin
+
         </Button>
-        <Button as='a' colorScheme='github' variant='outline'  _hover={{ bg: 'gray.100' }} href='https://github.com/TheScientist137'>
+        <Button
+          as='a'
+          colorScheme='github'
+          variant='outline' 
+          _hover={colorMode === 'light' ? { bg: 'gray.100' } : { bg: 'gray.700' }}
+          href='https://github.com/TheScientist137'>
           <Icon as={FaGithub} boxSize={4}  marginRight='4px' marginBottom='2px' /> Github        
         </Button>
       </Stack>

@@ -1,8 +1,5 @@
-import { Box, Icon, useColorModeValue } from "@chakra-ui/react"
+import { Box, Image, useColorModeValue } from "@chakra-ui/react"
 import { motion } from "framer-motion"
-import { FaHtml5, FaCss3Alt, FaReact, FaBootstrap } from "react-icons/fa";
-import { RiJavascriptFill } from "react-icons/ri";
-import { SiTailwindcss, SiRedux, SiVite } from "react-icons/si";
 
 import '../App.css'
 
@@ -10,14 +7,14 @@ const Skills = () => {
  const boxColor = useColorModeValue('#fff6eb', 'gray.700')
 
  const icons = [
-  FaHtml5,
-  FaCss3Alt,
-  RiJavascriptFill,
-  FaReact,
-  SiRedux,
-  FaBootstrap,
-  SiTailwindcss,
-  SiVite
+  'html-icon',
+  'css-icon',
+  'javascript-icon',
+  'react-icon',
+  'redux-icon',
+  'bootstrap-icon',
+  'tailwind-icon',
+  'vite-icon'
  ]
 
  const container = {
@@ -38,7 +35,8 @@ const Skills = () => {
    w='100%'
    h='120px'
    bgColor={boxColor}
-   borderRadius='10px'>
+   boxShadow='lg'
+   borderRadius='lg'>
 
    <motion.div
     className='variants-div'
@@ -48,7 +46,7 @@ const Skills = () => {
 
     {icons.map((icon, index) => (
      <motion.div className='variants-item-div' key={index} variants={item}>
-      <Icon as={icon} w='100%' h='100%' />
+      <Image className={icon} src={`./skills-images/${icon}.svg`} />      
      </motion.div>
     ))}
     

@@ -8,10 +8,14 @@
 }
 
 .variants-item-div {
- width: 2.3rem;
- height: 2.3rem;
+ width: 2.2rem;
+ height: 2.2rem;
  margin: auto;
  display: flex;
  align-items: center;
  justify-content: center;
+}
+
+.variants-item-div:hover {
+ transform: scale(120%);
 }
