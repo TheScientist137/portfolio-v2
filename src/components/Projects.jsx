@@ -23,9 +23,10 @@ const Projects = () => {
     id='projects'
     h='100%'
     w='100%'
+    mt='4rem'
     textAlign='center'>
 
-    <Heading as='h2' my='32px'>Projects</Heading>
+    <Heading as='h2' my='32px' fontFamily='Dosis' fontSize='32px'>Projects</Heading>
 
    {projects.map(project => (
       <Card

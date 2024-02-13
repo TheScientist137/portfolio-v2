@@ -14,7 +14,7 @@ function App() {
   const bgColor = useColorModeValue('#f0e7db', 'gray.900')
 
   return (
-    <Box bgColor={bgColor}>
+    <Box bgColor={bgColor} display='flex' flexDir='column' justifyContent='center' alignItems='center'>
       <Header />
       <Container centerContent>
         <Routes>

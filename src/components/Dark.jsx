@@ -7,17 +7,19 @@ const Dark = () => {
  const iconBg = useColorModeValue('purple.400', 'yellow.400') 
 
  return (
-  <motion.button>  
+  <motion.div whileTap={{ rotate: 90 }}>  
     <IconButton
       as='button'
       onClick={toggleColorMode}
       boxSize='40px'
       bg={iconBg}
       icon={colorMode === 'light' ? <MoonIcon color='white' /> : <SunIcon color='black' />}
-      _hover={colorMode === 'light' ? { bgColor: 'purple.500' } : { bgColor: 'yellow.500' }}>
+      _hover={colorMode === 'light' ? { bgColor: 'purple.500' } : { bgColor: 'yellow.500' }}
+      _active={colorMode === 'light' ? { bgColor: 'purple.600' } : { bgColor: 'yellow.600' }}>
+
       {colorMode === 'light' ? 'Dark' : 'Light'}
     </IconButton>
-  </motion.button>
+  </motion.div>
  )
 }
 

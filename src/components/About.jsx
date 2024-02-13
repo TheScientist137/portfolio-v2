@@ -11,23 +11,23 @@ import {
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 
-// import Skills from "./Skills"
+import Skills from "./Skills"
 
 const About = () => {
-
   return (
     <Box 
       as='section'
       id='about'
       w='100%'
       h='100vh'
+      mt='1.8rem'
       display='flex'
       flexDirection='column'
-      alignItems='center'>
+      alignItems='center'
+      justifyContent='space-evenly'>
 
       <Box
         w='100%'
-        my='32px'
         p='12px'
         boxShadow='lg'
         borderRadius='lg'
@@ -39,11 +39,13 @@ const About = () => {
           pt='5px'
           textAlign='center'
           lineHeight='tall'
-          fontSize={{ base: '11px', md: '12px' }}>
+          fontFamily='Dosis'
+          fontSize='0.9rem'
+          fontWeight='700'>
           Hello! I&apos;m a
-          <Badge colorScheme='green' pt='4px' ml='1' fontSize='2md'>
+          <Badge colorScheme='green' p='2px' ml='1' mb='1' fontSize='2md'>
             Front-End Web Developer
-          </Badge> based in Madrid, Spain
+          </Badge> based in Madrid, Spain          
         </Heading>
       </Box>
     
@@ -56,19 +58,23 @@ const About = () => {
         boxShadow='dark-lg'
         boxSize={{ base: '170px', sm: '220px' }} />
   
-      <Box w='100%' mt='32px' textAlign='left'>
-        <Heading as='h2' fontSize={{ base: '20px', sm: '24px', md: '28px' }}>
+      <Box w='100%' textAlign='center'>
+        <Heading as='h2' fontFamily='Dosis' fontWeight='700' fontSize={{ base: '24px', sm: '26px', md: '28px' }}>
           Guillermo Casado Noya
         </Heading>
-        <Text as='h3' fontStyle='italic' fontSize={{ base: '12px', sm: '14px' }}>
+
+        <Text as='h3' fontFamily='Dosis' fontWeight='400' fontSize={{ base: '12px', sm: '16px' }}>
           Software Developer / Electronic Technician
         </Text>
+
         <Text as='h4' mt='16px' textAlign='start' fontSize={{ base: '14px' }}>
         I began my journey in programming two years ago while pursuing my superior degree in electronics maintenance. Since then, I have developed a deep passion for programming and embarked on a journey to specialize in front-end development.
         </Text>
       </Box>
+
+      <Skills />
     
-      <Stack my='32px' direction='row' spacing={2} align='center'>
+      <Stack direction='row' spacing={2} align='center'>
         <Button as='a' colorScheme='linkedin' variant='outline' href='https://www.linkedin.com/in/guillermo-casado-noya-209b45268/'>
           <Icon as={FaLinkedin} boxSize={4}  marginRight='4px' marginBottom='2px' /> Linkedin
         </Button>
@@ -76,6 +82,8 @@ const About = () => {
           <Icon as={FaGithub} boxSize={4}  marginRight='4px' marginBottom='2px' /> Github        
         </Button>
       </Stack>
+
+
   </Box>
  )
 }

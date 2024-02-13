@@ -14,9 +14,10 @@ const Contact = () => {
   id='projects'
   h='100vh'
   w='100%'
+  mt='4rem'
   textAlign='center'>
 
-   <Heading as='h2' my='32px'>Contact</Heading>
+   <Heading as='h2' my='32px' fontFamily='Dosis' fontSize='32px'>Contact</Heading>
 
    <FormControl>
     <FormLabel>Name</FormLabel>

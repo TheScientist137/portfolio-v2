@@ -1,26 +1,57 @@
-import { Box, Icon } from "@chakra-ui/react"
+import { Box, Icon, useColorModeValue } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { FaHtml5, FaCss3Alt, FaReact, FaBootstrap } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
-import { SiTailwindcss } from "react-icons/si";
+import { SiTailwindcss, SiRedux, SiVite } from "react-icons/si";
+
+import '../App.css'
 
 const Skills = () => {
+ const boxColor = useColorModeValue('#fff6eb', 'gray.700')
+
+ const icons = [
+  FaHtml5,
+  FaCss3Alt,
+  RiJavascriptFill,
+  FaReact,
+  SiRedux,
+  FaBootstrap,
+  SiTailwindcss,
+  SiVite
+ ]
+
+ const container = {
+  hidden: { opacity: 0 },
+  visible: {
+   opacity: 1,
+   transition: { delayChildren: 0.3, staggerChildren: 0.2 }
+  }
+ }
+
+ const item = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 }
+ }
+
  return (
-  <Box as='section'>
+  <Box
+   w='100%'
+   h='120px'
+   bgColor={boxColor}
+   borderRadius='10px'>
+
    <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ x: [-100, 100, 0], opacity: 1 }}
-    transition={{
-     repeatType: 'loop',
-     duration: 1,
-     ease: 'linear'
-     }}>
-    <Icon as={FaHtml5} mr='6px' boxSize={12} />
-    <Icon as={FaCss3Alt} mr='6px' boxSize={12} />
-    <Icon as={RiJavascriptFill} mr='6px' boxSize={12} />
-    <Icon as={FaReact} mr='6px' boxSize={12} />
-    <Icon as={FaBootstrap} mr='6px' boxSize={12} />
-    <Icon as={SiTailwindcss} mr='6px' boxSize={12} />
+    className='variants-div'
+    initial='hidden'
+    animate='visible'
+    variants={container}>
+
+    {icons.map((icon, index) => (
+     <motion.div className='variants-item-div' key={index} variants={item}>
+      <Icon as={icon} w='100%' h='100%' />
+     </motion.div>
+    ))}
+    
    </motion.div>
   </Box>
  )

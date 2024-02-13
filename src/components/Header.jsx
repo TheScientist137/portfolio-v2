@@ -28,11 +28,12 @@ const Header = () => {
     <Box
       className='header'
       as='section'
-      h={14}
+      w='100vw'
+      h='54px'
       display='flex'
       alignItems='center'
       justifyContent='space-between'
-      position='sticky'
+      position='fixed'
       top={0}
       left={0}
       zIndex='1'
@@ -42,7 +43,7 @@ const Header = () => {
       <Box as='title' display='flex' justifyContent='center' alignItems='center'>
         <Avatar name='Guillermo Casado' src='/me.jpg' size='sm' mr='6px' />
 
-        <Heading as='h1' size='md' letterSpacing={2.1} fontFamily='Protest Revolution'>
+        <Heading as='h1' size='sm' letterSpacing={2.1} fontFamily='Protest Revolution'>
           <ChakraLink as={RouterLink} to='/about'>
             Guillermo Casado
           </ChakraLink>
@@ -50,9 +51,9 @@ const Header = () => {
       </Box>
 
       <Show breakpoint='(max-width: 749px)'>
-        <Box>
-          <Dark />
 
+        <Box w='90px' display='flex' justifyContent='space-between'>
+          <Dark />
           <Menu>
             <MenuButton
               as={IconButton}
@@ -69,12 +70,12 @@ const Header = () => {
               <MenuItem as={RouterLink} to='/contact'>Contact</MenuItem>
            </MenuList>
           </Menu>
-
         </Box>
+
       </Show>
 
       <Hide breakpoint='(max-width: 749px)'>
-
+        
         <Breadcrumb>
           <BreadcrumbItem>
             <BreadcrumbLink as={RouterLink} to='/about'>About</BreadcrumbLink>
@@ -89,7 +90,8 @@ const Header = () => {
           </BreadcrumbItem>
 
           <Dark />
-        </Breadcrumb>          
+        </Breadcrumb> 
+
       </Hide>  
     </Box>
   )
