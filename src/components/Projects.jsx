@@ -2,11 +2,9 @@ import {
   Box,
   Heading,
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
   Image,
-  Stack,
   Text,
   Divider,
   ButtonGroup,
@@ -37,9 +35,6 @@ const Projects = () => {
           boxShadow='xl'
           _light={{ bgColor: '#fff6eb' }}>
           
-          <CardHeader as='h3' fontFamily='Dosis' fontSize='22px' fontWeight='600'>{project.name}</CardHeader>
-      
-          <Divider />
       
           <CardBody>
             <Image
@@ -48,14 +43,13 @@ const Projects = () => {
               objectFit='cover'
               align='center'
               mx='auto'
-              mb='20px'
               borderRadius='lg'/>
-  
-            <Stack>
-              <Text  textAlign='left' fontFamily='Dosis' fontSize='16px' fontWeight='500'>
+
+              <Heading mt='16px' fontSize='18px'>{project.name}</Heading>
+
+              <Text mt='12px' textAlign='left' fontFamily='Dosis' fontSize='14px' fontWeight='500'>
                 {project.description}
               </Text>
-            </Stack>
           </CardBody>
       
           <Divider />
