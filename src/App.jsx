@@ -1,5 +1,5 @@
 import { Box, Container } from '@chakra-ui/react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/Header'
 import About from './components/About'
 import Projects from './components/Projects'
@@ -14,15 +14,24 @@ function App() {
   const bgColor = useColorModeValue('#f0e7db', 'gray.900')
 
   return (
-    <Box bgColor={bgColor} display='flex' flexDir='column' justifyContent='center' alignItems='center'>
+    <Box
+      bgColor={bgColor}
+      display='flex'
+      flexDir='column'
+      justifyContent='center'
+      alignItems='center'>
+
       <Header />
-      <Container centerContent>
+
+      <Container px='1.8rem' centerContent>
         <Routes>
+          <Route path='/' element={<Navigate to='/about' />} />
           <Route path='/about' element={<About />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
       </Container>
+
       <Footer />
     </Box>
   )

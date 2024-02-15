@@ -23,12 +23,12 @@ const Projects = () => {
     id='projects'
     h='100%'
     w='100%'
-    mt='4rem'
+    mt='3rem'
     textAlign='center'>
 
     <Heading as='h2' my='32px' fontFamily='Dosis' fontSize='32px'>Projects</Heading>
     
-    <Box display='grid' gridTemplateColumns='repeat(2, 400fr)' gridGap={4}> 
+    <Box display='grid' gridTemplateColumns='repeat(1, 400fr)' gridGap={4}> 
       {projects.map(project => (
         <Card
           key={project.id}

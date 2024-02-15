@@ -31,7 +31,7 @@ const About = () => {
 
       <Box
         w='100%'
-        p='12px'
+        p='1rem'
         boxShadow='lg'
         borderRadius='lg'
         _light={{ bgColor: '#fff6eb' }}
@@ -56,7 +56,7 @@ const About = () => {
         src='/me.jpg'
         alt='Guillermo (profile-image)'
         border='2px'
-        borderColor='gray.300'
+        borderColor='gray.100'
         borderRadius='full'
         boxShadow='dark-lg'
         boxSize={{ base: '170px', sm: '220px' }} />
@@ -66,11 +66,11 @@ const About = () => {
           Guillermo Casado Noya
         </Heading>
 
-        <Text as='h3' fontFamily='Dosis' fontWeight='400' fontSize={{ base: '12px', sm: '14px' }}>
+        <Text as='h3' fontFamily='Dosis' fontWeight='500' fontSize={{ base: '12px', sm: '14px' }}>
           Software Developer / Electronic Technician
         </Text>
 
-        <Text as='h4' mt='16px' textAlign='start' fontSize={{ sm: '16px' }} fontFamily='Dosis' fontWeight='500'>
+        <Text as='h4' mt='16px' textAlign='start' fontFamily='Dosis' fontWeight='500'>
         I began my journey in programming two years ago while pursuing my superior degree in electronics maintenance. Since then, I have developed a deep passion for programming and embarked on a journey to specialize in front-end development.
         </Text>
       </Box>
@@ -82,6 +82,7 @@ const About = () => {
           as='a'
           colorScheme='linkedin'
           variant='outline'
+          borderWidth='2px'
           href='https://www.linkedin.com/in/guillermo-casado-noya-209b45268/'>
 
           <Icon as={FaLinkedin} boxSize={4}  marginRight='4px' marginBottom='2px' /> Linkedin
@@ -91,6 +92,7 @@ const About = () => {
           as='a'
           colorScheme='github'
           variant='outline' 
+          borderWidth='2px'
           _hover={colorMode === 'light' ? { bg: 'gray.100' } : { bg: 'gray.700' }}
           href='https://github.com/TheScientist137'>
           <Icon as={FaGithub} boxSize={4}  marginRight='4px' marginBottom='2px' /> Github        

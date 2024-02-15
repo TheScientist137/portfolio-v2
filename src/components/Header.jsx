@@ -64,6 +64,7 @@ const Header = () => {
               icon={<HamburgerIcon />}
               boxSize='40px'
               variant='outline'
+              borderColor='gray.500'
               aria-label='Options'
               _hover={colorMode === 'light' ? { bg: 'gray.300' } : { bg: 'gray.700' }}/>
 
