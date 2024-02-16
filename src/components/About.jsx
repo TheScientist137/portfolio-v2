@@ -93,9 +93,11 @@ const About = () => {
           colorScheme='github'
           variant='outline' 
           borderWidth='2px'
-          _hover={colorMode === 'light' ? { bg: 'gray.100' } : { bg: 'gray.700' }}
-          href='https://github.com/TheScientist137'>
+          href='https://github.com/TheScientist137'
+          _hover={colorMode === 'light' ? { bg: 'gray.100' } : { bg: 'gray.700' }}>
+            
           <Icon as={FaGithub} boxSize={4}  marginRight='4px' marginBottom='2px' /> Github        
+          
         </Button>
       </Stack>
 

@@ -1,11 +1,11 @@
 export const projects = [
  {
-  name: 'Astronomy Picture Of The Day (APOD)',
-  id: '1',
-  image: './apod-image.png',
-  description: 'Explore the cosmos the Astronomy Picture of the Day app: Created using React and integrated with NASAs APOD API. Each day, discover a new captivating image of space along with concise descriptions, offering a daily dose of inspiration and insight into the vastness of our universe.',
-  demoLink: 'https://apodapp137.netlify.app/',
-  githubLink: 'https://github.com/TheScientist137/APODApp'
+  name: 'Jammming app',
+  id: '3',
+  image: './jammming-image.png',
+  description: 'Jammming: A React-based web application integrating the Spotify API. Users can search for songs, create playlists, and save them to their Spotify accounts. Explore dynamic features including search functionality and playlist management',
+  demoLink: 'https://jammming-137.netlify.app/',
+  githubLink: 'https://github.com/TheScientist137/Jammming'
  },
  {
   name: 'Inspirational Homepage',
@@ -16,12 +16,12 @@ export const projects = [
   githubLink: 'https://github.com/TheScientist137/inspirational-homepage'
  },
  {
-  name: 'Jammming app',
-  id: '3',
-  image: './jammming-image.png',
-  description: 'Jammming: A React-based web application integrating the Spotify API. Users can search for songs, create playlists, and save them to their Spotify accounts. Explore dynamic features including search functionality and playlist management',
-  demoLink: 'https://jammming-137.netlify.app/',
-  githubLink: 'https://github.com/TheScientist137/Jammming'
+  name: 'Astronomy Picture Of The Day (APOD)',
+  id: '1',
+  image: './apod-image.png',
+  description: 'Explore the cosmos the Astronomy Picture of the Day app: Created using React and integrated with NASAs APOD API. Each day, discover a new captivating image of space along with concise descriptions, offering a daily dose of inspiration and insight into the vastness of our universe.',
+  demoLink: 'https://apodapp137.netlify.app/',
+  githubLink: 'https://github.com/TheScientist137/APODApp'
  },
  {
   name: 'Film Search',
