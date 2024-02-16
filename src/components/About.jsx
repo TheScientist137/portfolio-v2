@@ -71,7 +71,7 @@ const About = () => {
         </Text>
 
         <Text as='h4' mt='16px' textAlign='start' fontFamily='Dosis' fontWeight='500'>
-        I began my journey in programming two years ago while pursuing my superior degree in electronics maintenance. Since then, I have developed a deep passion for programming and embarked on a journey to specialize in front-end development.
+          I began my journey in programming two years ago while pursuing my superior degree in electronics maintenance. Since then, I have developed a deep passion for programming and embarked on a journey to specialize in front-end development.
         </Text>
       </Box>
 
@@ -97,7 +97,7 @@ const About = () => {
           _hover={colorMode === 'light' ? { bg: 'gray.100' } : { bg: 'gray.700' }}>
             
           <Icon as={FaGithub} boxSize={4}  marginRight='4px' marginBottom='2px' /> Github        
-          
+
         </Button>
       </Stack>
 

@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react"
 import { useRef, useState } from "react"
 import emailjs from '@emailjs/browser'
+import { IoIosHappy } from 'react-icons/io'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -90,7 +91,7 @@ const Contact = () => {
 
       <Box w='100%' p='1.2rem' bg={boxColor} borderRadius='lg' boxShadow='xl'>
         <form ref={form} onSubmit={handleSubmit}>
-          <FormControl mb='1rem'>
+          <FormControl mb='1rem' isRequired>
             <FormLabel fontFamily='Dosis'>Name</FormLabel>
             <Input
               type='text'
@@ -163,7 +164,12 @@ const Contact = () => {
         </form>
       </Box> 
 
-      <Text mt='32px' textAlign='center' fontFamily='Dosis' fontWeight='500'>Looking forward to connecting with you!</Text>
+      <Box display='flex'  alignItems='center' justifyContent='center'>
+        <Text mt='32px' fontFamily='Dosis' fontWeight='500'>
+          Looking forward to connecting with you!
+        </Text>
+        <IoIosHappy style={{ marginTop: '32px', marginLeft: '5px', fontSize: '22px' }} />
+      </Box>
     </Box>
  )
 }
