@@ -4,7 +4,7 @@ const Footer = () => {
  const footerText = useColorModeValue('gray.400', 'gray.600')
 
  return (
-  <Box w='100%' h='36px' mt={{ base: '1rem', sm: 0 }} textAlign='center'>
+  <Box w='100%' h='36px' mt={{ base: '0.5', sm: 0 }} textAlign='center'>
    <Text
     as='h4'
     h='100%'
