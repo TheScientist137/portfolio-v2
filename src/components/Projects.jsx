@@ -54,8 +54,8 @@ const Projects = () => {
       
           <Divider />
       
-          <CardFooter>
-            <ButtonGroup spacing='2' mx='auto'>
+          <CardFooter p='1rem' display='flex' justifyContent='center'>
+            <ButtonGroup spacing='2'>
               <Button as='a' colorScheme='linkedin' variant='outline' href={project.demoLink}>
                 <Icon as={FaGooglePlay} boxSize={4}  marginRight='4px' marginBottom='2px' /> Demo
               </Button>

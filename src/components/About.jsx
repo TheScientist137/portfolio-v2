@@ -22,7 +22,7 @@ const About = () => {
       as='section'
       id='about'
       w='100%'
-      h='100vh'
+      h={{ base: '100%', sm: '100vh' }}
       mt='1.7rem'
       display='flex'
       flexDirection='column'
@@ -31,7 +31,9 @@ const About = () => {
 
       <Box
         w='100%'
-        p='1rem'
+        mt={{ base: '2.5rem', sm: 0 }}
+        mb={{ base: '1rem', sm: 0 }}
+        p={{ base: '0.5rem', sm: '1rem' }}
         boxShadow='lg'
         borderRadius='lg'
         _light={{ bgColor: '#fff6eb' }}
@@ -39,14 +41,13 @@ const About = () => {
           
         <Heading
           as='h3'
-          pt='5px'
           textAlign='center'
           lineHeight='tall'
           fontFamily='Dosis'
           fontSize='0.9rem'
           fontWeight='700'>
           Hello, I&apos;m a          
-          <Badge colorScheme='green' p='4px' ml='1' mb='1' fontSize='2md' borderRadius='4px'>
+          <Badge colorScheme='green' p='4px' ml='1' mb={{ base: 0, sm: 1 }} fontSize='2md' borderRadius='4px'>
             Front-End Web Developer
           </Badge> based in Madrid, Spain          
         </Heading>
@@ -55,6 +56,7 @@ const About = () => {
       <Image
         src='/me.jpg'
         alt='Guillermo (profile-image)'
+        mb={{ base: '1rem', sm: 0 }}
         border='2px'
         borderColor='gray.100'
         borderRadius='full'
@@ -70,14 +72,14 @@ const About = () => {
           Software Developer / Electronic Technician
         </Text>
 
-        <Text as='h4' mt='16px' textAlign='start' fontFamily='Dosis' fontWeight='500'>
+        <Text as='h4' mt='1rem' textAlign='start' fontFamily='Dosis' fontWeight='500' fontSize={{ base: '14px', sm: '15px' }}>
           I began my journey in programming two years ago while pursuing my superior degree in electronics maintenance. Since then, I have developed a deep passion for programming and embarked on a journey to specialize in front-end development.
         </Text>
       </Box>
 
       <Skills />
     
-      <Stack direction='row' spacing={2} align='center'>
+      <Stack mb={{ base: '1rem', sm: 0 }} direction='row' spacing={2} align='center'>
         <Button
           as='a'
           colorScheme='linkedin'

@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react"
 import { useRef, useState } from "react"
 import emailjs from '@emailjs/browser'
-import { IoIosHappy } from 'react-icons/io'
+// import { IoIosHappy } from 'react-icons/io'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -85,7 +85,7 @@ const Contact = () => {
       
       <Heading as='h2' my='32px' textAlign='center' fontFamily='Dosis' fontSize='32px'>Contact</Heading>
 
-      <Text mb='32px' fontFamily='Dosis' fontWeight='500'>
+      <Text mb='32px' fontFamily='Dosis' fontWeight='500' fontSize={{ base: '14px' }}>
         Thank you for considering reaching out! Whether you have a question, a project idea, or just want to say hello, I&apos;d love to hear from you. Feel free to use the form below to send me a message directly. I strive to respond to all inquiries promptly, typically within 24-48 hours.
       </Text>
 
@@ -164,11 +164,10 @@ const Contact = () => {
         </form>
       </Box> 
 
-      <Box display='flex'  alignItems='center' justifyContent='center'>
-        <Text mt='32px' fontFamily='Dosis' fontWeight='500'>
+      <Box display='flex' justifyContent='center'>
+        <Text mt='32px' mb={{ base: '2rem', sm: 0 }} fontFamily='Dosis' fontWeight='500' fontSize={{ base: '14px', sm: '16px' }}>
           Looking forward to connecting with you!
         </Text>
-        <IoIosHappy style={{ marginTop: '32px', marginLeft: '5px', fontSize: '22px' }} />
       </Box>
     </Box>
  )
