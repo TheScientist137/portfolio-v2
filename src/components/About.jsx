@@ -79,7 +79,7 @@ const About = () => {
 
       <Skills />
     
-      <Stack mb={{ base: '1rem', sm: 0 }} direction='row' spacing={2} align='center'>
+      <Stack mb={{ base: '1.5rem', sm: 0 }} direction='row' spacing={2} align='center'>
         <Button
           as='a'
           colorScheme='linkedin'

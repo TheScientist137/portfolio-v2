@@ -34,7 +34,7 @@ const Skills = () => {
   <Box
    w='100%'
    h='120px'
-   my={{ base: '1.3rem', sm: 0 }}
+   my={{ base: '1.5rem', sm: 0 }}
    bgColor={boxColor}
    boxShadow='lg'
    borderRadius='lg'>
