@@ -1,3 +1,7 @@
 [[redirects]]
   from = "/about"
   to = "/"
+
+[[redirects]]
+  from = "/projects"
+  to ="/projects"
