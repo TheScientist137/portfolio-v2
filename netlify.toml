@@ -1,4 +1,12 @@
 
 [[redirects]]
-  from = "/*" 
-  to = "/about"
+  from = "/about" 
+  to = "/"
+
+[[redirects]]
+  from = "/projects"
+  to = "/"
+
+[[redirects]]
+  from = "/contact"
+  to = "/"
