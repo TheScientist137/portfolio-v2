@@ -3,6 +3,5 @@
   to = "/"
 
 [[redirects]]
-  from = "/projects"
-  to ="/projects"
-  force = true
+  from = "/*" 
+  to = "/"
